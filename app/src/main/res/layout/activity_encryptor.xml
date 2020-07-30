@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Encryptor">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        android:text="ENTER YOUR MESSEAGE\n        *TO ENCRYPT*"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:id="@+id/messageTOEncrypt"
+        android:hint="Enter your Text Here"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:text="Input Encryption KEY"
+    android:textSize="20dp"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/keytext"
+    android:layout_below="@id/messageTOEncrypt"
+    />
+    <EditText
+        android:password="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter your Key Here(NUMBER)"
+        android:inputType="number"
+        android:layout_below="@id/keytext"
+        android:id="@+id/key"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Encrypt"
+        android:id="@+id/EncryptBtn"
+        android:onClick="Encrypt"
+        android:layout_below="@id/key"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encrypted Message"
+        android:textSize="20dp"
+        android:id="@+id/encTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/EncryptBtn"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:hint="Encrypted message will appear here"
+        android:layout_below="@id/encTxt"
+        android:textIsSelectable="true"
+        android:id="@+id/EncryptedMessage"/>
+</RelativeLayout>
+</ScrollView>
